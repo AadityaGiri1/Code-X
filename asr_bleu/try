@@ -1,0 +1,19 @@
+from gtts import gTTS
+
+def text_to_speech(text, filename):
+    # Create a gTTS object
+    tts = gTTS(text=text, lang='hi')
+    
+    # Save the speech as a WAV file
+    tts.save(filename)
+
+if __name__ == "__main__":
+    # Get input text from the user in Hindi
+    text = input("Enter the Hindi text you want to convert to speech: ")
+
+    # File name for the WAV file
+    filename = "output.wav"
+
+    # Convert text to speech and save as a WAV file
+    text_to_speech(text, filename)
+    print(f"Speech saved as {filename}")
